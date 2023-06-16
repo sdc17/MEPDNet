@@ -39,7 +39,7 @@ For example, to train MEPDNet:
 python run.py --model mepdnet --mode train -l 0.00008 -b 2 -e 100 --gpu-id 0 1
 ```
 
-Training Script for other models are in [train.sh](train.sh).
+Training scripts for other models are in [train.sh](train.sh).
 
 
 ### Evaluation Script
@@ -61,7 +61,7 @@ For example, to evaluate MEPDNet:
 ```bash
 python run.py --model mepdnet --mode test --state 70 -b 4 --gpu-ids 0 1
 ```
-Evaluation Script for other models are in [test.sh](test.sh).
+Evaluation scripts for other models are in [test.sh](test.sh).
 
 
 ### Cite
