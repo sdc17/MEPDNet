@@ -13,7 +13,7 @@ Official implementation of [Multi-Encoder Parse-Decoder Network for Sequential M
 * [Attention R2U-Net](./model/AR2UNet.py)
 * [ScSE U-Net](./model/SCSEUNet.py)
 * [CE-Net](./model/CENet.py)
-* [UNet++](./https://arxiv.org/pdf/1807.10165.pdf)
+* [UNet++](./model/NestedUNet.py)
 
 
 ### Training Script
