@@ -33,7 +33,7 @@ optional arguments:
                         Learning rate
 ```
 
-For example, to train MEPDNEt:
+For example, to train MEPDNet:
 
 ```bash
 python run.py --model mepdnet --mode train -l 0.00008 -b 2 -e 100 --gpu-id 0 1
@@ -57,7 +57,7 @@ optional arguments:
                         Batch size
 ```
 
-For example, to evaluate MEPDNEt:
+For example, to evaluate MEPDNet:
 ```bash
 python run.py --model mepdnet --mode test --state 70 -b 4 --gpu-ids 0 1
 ```
