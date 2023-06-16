@@ -4,19 +4,19 @@ Official implementation of [Multi-Encoder Parse-Decoder Network for Sequential M
 
 ### Supported Models
 
-* MEPDNet (Ours)
-* SegNet
-* DeepLabv3+
-* U-Net
-* Attention U-Net
-* R2U-Net
-* Attention R2U-Net
-* ScSE U-Net
-* CE-Net
-* UNet++
+* [MEPDNet(Ours)](./model/MEPDNet.py)
+* [SegNet](./model/SegNet.py)
+* [DeepLabv3+](./model/DeepLab_v3plus.py)
+* [U-Net](./model/UNet.py)
+* [Attention U-Net](./model/AttUNet.py)
+* [R2U-Net](./model/AR2UNet.py)
+* [Attention R2U-Net](./model/AR2UNet.py)
+* [ScSE U-Net](./model/SCSEUNet.py)
+* [CE-Net](./model/CENet.py)
+* [UNet++](./https://arxiv.org/pdf/1807.10165.pdf)
 
 
-### Train
+### Training Script
 
 ```bash
 python run.py --model $MODEL_NAME --mode train -l $LR -b $BATCH_SIZE -e $EPOCHS --gpu-id $GPU_ID
@@ -32,10 +32,17 @@ optional arguments:
   -l LR, --learning-rate LR
                         Learning rate
 ```
-See examples in [train.sh](train.sh).
+
+For example, to train MEPDNEt:
+
+```bash
+python run.py --model mepdnet --mode train -l 0.00008 -b 2 -e 100 --gpu-id 0 1
+```
+
+Training Script for other models are in [train.sh](train.sh).
 
 
-### Evaluate
+### Evaluation Script
 
 ```bash
 python run.py --model $MODEL_NAME --mode test --state $MODEL_ID -b $BATCH_SIZE --gpu-ids $GPU_ID
@@ -49,11 +56,16 @@ optional arguments:
   -b BATCH_SIZE, --batch-size BATCH_SIZE
                         Batch size
 ```
-See examples in [test.sh](test.sh).
+
+For example, to evaluate MEPDNEt:
+```bash
+python run.py --model mepdnet --mode test --state 70 -b 4 --gpu-ids 0 1
+```
+Evaluation Script for other models are in [test.sh](test.sh).
 
 
 ### Cite
-
+If you find this work useful, please consider citing the corresponding paper:
 <pre/>
 @inproceedings{shi2021multi,
   title={Multi-encoder parse-decoder network for sequential medical image segmentation},
