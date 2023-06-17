@@ -66,7 +66,7 @@ Evaluation scripts for other models are in [test.sh](test.sh).
 
 ### Cite
 If you find this work useful, please consider citing the corresponding paper:
-<pre/>
+```bibtex
 @inproceedings{shi2021multi,
   title={Multi-encoder parse-decoder network for sequential medical image segmentation},
   author={Shi, Dachuan and Liu, Ruiyang and Tao, Linmi and He, Zuoxiang and Huo, Li},
@@ -75,4 +75,4 @@ If you find this work useful, please consider citing the corresponding paper:
   year={2021},
   organization={IEEE}
 }
-</pre>
+```
